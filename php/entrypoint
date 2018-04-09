@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+cd /web/service/thrift;
+chmod a+x service.php;
+python2.7 runserver.py localhost 8888 &
