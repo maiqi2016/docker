@@ -4,6 +4,10 @@
 
 ## 安装步骤
 
+* cd docker/
+
+> 题外话安装所有项目源码执行：./init-clone-project.sh
+
 * sudo docker-compose up --build
 
     > 提示! 如果你的 `build` 操作过慢，你可前往 [daocloud](https://www.daocloud.io) 注册并获取加速方式，如果你是 `linux`, 则类似
