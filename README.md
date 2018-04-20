@@ -7,6 +7,8 @@
 * cd docker/
 
 > 题外话安装所有项目源码执行：./init-clone-project.sh
+> 如果你是 `windows` 环境，所有的可执行文件均需要使用 `vim` 执行模式 `set ff` 或者使用 `dos2unix` 软件进行转换  
+> 数据库配置文件 `/etc/my.cnf` 文件的权限必须是 `0644`
 
 * sudo docker-compose up --build
 

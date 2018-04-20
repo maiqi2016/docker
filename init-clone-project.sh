@@ -16,6 +16,7 @@ then
 fi
 
 projects=(
+    docker
     source
     kake
     service
