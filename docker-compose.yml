@@ -5,7 +5,7 @@
 
 # database
 mq-mysql:
-  image: mysql:latest
+  image: mysql:5.7
   ports:
     # Allow client to access 3306
     - "3306:3306"
