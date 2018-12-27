@@ -9,7 +9,7 @@ fi
 
 if [ `cat ${profile} | grep 'alias mq-front' | wc -l | awk '{print $1}'` == 0 ]; then
     color 35 'Build alias for `node`、`npm`、`cnpm`'
-    echo "alias mq-front='sudo docker run --rm -v \$(pwd):/app front'" >> ${profile}
+    echo "alias mq-front='sudo docker run --privileged=true --rm -v \$(pwd):/app front'" >> ${profile}
     echo "alias mq-node='mq-front node'" >> ${profile}
     echo "alias mq-npm='mq-front npm'" >> ${profile}
     echo "alias mq-cnpm='mq-front cnpm'" >> ${profile}
