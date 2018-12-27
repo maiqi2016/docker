@@ -35,19 +35,19 @@ EOF
 fi
 
 if [ `cat ${profile} | grep 'alias mq-container-fpm' | wc -l | awk '{print $1}'` == 0 ]; then
-    echo "alias mq-container-fpm=\"sudo docker exec -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-fpm' | awk '{print \$1}'\`\"" >> ${profile}
+    echo "alias mq-container-fpm=\"sudo docker exec --privileged=true -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-fpm' | awk '{print \$1}'\`\"" >> ${profile}
 fi
 
 if [ `cat ${profile} | grep 'alias mq-container-mysql' | wc -l | awk '{print $1}'` == 0 ]; then
-    echo "alias mq-container-mysql=\"sudo docker exec -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-mysql' | awk '{print \$1}'\`\"" >> ${profile}
+    echo "alias mq-container-mysql=\"sudo docker exec --privileged=true -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-mysql' | awk '{print \$1}'\`\"" >> ${profile}
 fi
 
 if [ `cat ${profile} | grep 'alias mq-container-nginx' | wc -l | awk '{print $1}'` == 0 ]; then
-    echo "alias mq-container-nginx=\"sudo docker exec -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-nginx' | awk '{print \$1}'\`\"" >> ${profile}
+    echo "alias mq-container-nginx=\"sudo docker exec --privileged=true -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-nginx' | awk '{print \$1}'\`\"" >> ${profile}
 fi
 
 if [ `cat ${profile} | grep 'alias mq-container-python' | wc -l | awk '{print $1}'` == 0 ]; then
-    echo "alias mq-container-python=\"sudo docker exec -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-python' | awk '{print \$1}'\`\"" >> ${profile}
+    echo "alias mq-container-python=\"sudo docker exec --privileged=true -it \`sudo docker ps -a --format='table {{.ID}}\t{{.Names}}' | grep 'mq-python' | awk '{print \$1}'\`\"" >> ${profile}
 fi
 
 # -- eof --

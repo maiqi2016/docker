@@ -9,7 +9,7 @@ fi
 
 if [ `cat ${profile} | grep 'alias mq-composer' | wc -l | awk '{print $1}'` == 0 ]; then
     color 35 'Build alias for `composer`'
-    echo "alias mq-composer='sudo docker run --rm -v \$(pwd):/app library/composer'" >> ${profile}
+    echo "alias mq-composer='sudo docker run --privileged=true --rm -v \$(pwd):/app library/composer'" >> ${profile}
     color 34 'You can use command `mq-composer` substitution `composer` now'
 fi
 
